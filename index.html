@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laurent Aedrian Onday, PMP | Portfolio</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --secondary: #0f172a;
+            --accent: #2563eb;
+            --text: #334155;
+            --light-bg: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .pmp-badge {
+            background-color: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .cta-btn {
+            background-color: var(--accent);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .skill-card h3 {
+            color: var(--secondary);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.25rem;
+        }
+
+        .skill-card li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 1rem;
+            margin: 0.5rem 0 1.25rem 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-tag {
+            color: var(--accent);
+            background: #eff6ff;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .project-card h3 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+        }
+
+        .project-card h4 {
+            color: var(--secondary);
+            margin: 1rem 0 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        .project-card ul {
+            padding-left: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card li {
+            margin-bottom: 0.25rem;
+        }
+
+        .outcome-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            border-radius: 0 4px 4px 0;
+            margin-top: 1rem;
+        }
+
+        .outcome-box strong {
+            color: #14532d;
+        }
+
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        footer {
+            background-color: var(--secondary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 3rem 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #334155;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .project-card { padding: 1.5rem; }
+        }
+    </style>
+    <script type="text/javascript" async src="https://credly.com"></script>
+</head>
+<body>
+
+    <header>
+        <span class="pmp-badge">PMI Certified PMP</span>
+        <h1>Laurent Aedrian Onday, PMP</h1>
+        <p>Project Manager specializing in operations, governance, and contract lifecycle frameworks.</p>
+        <a href="mailto:laurentonday@gmail.com" class="cta-btn">Let's connect!</a>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>Professional Profile</h2>
+            <p class="about-text">
+                9 years of foundational expertise anchoring operations, complex contract redlining, and client delivery tracking. Experienced in introducing Agile frameworks into administrative workflows and enforcing strict controls to safeguard contractual compliance.
+            </p>
+        
+            <div class="badge-container">
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="367d660c-b05a-4137-be5d-ec4edd50837b" data-share-badge-host="https://credly.com"></div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Core Capabilities</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Project Governance</h3>
+                    <ul>
+                        <li>Maintaining clear approval pipelines</li>
+			<li>Managing clearly defined internal escalation structures</li>
+			<li>Queue Management</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Contract Operations and Sales Administration</h3>
+                    <ul>
+                        <li>Contract Drafting, Redlining and Execution</li>
+                        <li>Client Playbook & Compliance Tracking</li>
+                        <li>Procure-to-Pay Mapping</li>
+			<li>Quote-to-Order Setup, Administration and placement</li>
+                        <li>Contract Lifecycle Management (CLM)</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Client and Stakeholder Management</h3>
+                    <ul>
+                        <li>Stakeholder Alignment</li>
+                        <li>Distributed Team Management</li>
+  			<li>Adaptive Client Alignment</li>
+			<li>Expectation & Boundary Management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects and Involvements</h2>
+
+            <div class="project-card">
+                <h3>Contract Lifecycle Management (CLM) Optimization</h3>
+                <div class="project-meta">
+                    <span class="meta-tag">Methodology: Traditional</span>
+                    <span class="meta-tag">Industry: Corporate Services</span>
+                </div>
+                <p>Involved in the strategic transition of manual contract redlining and drafting routines into an integrated compliance workflow.</p>
+                <h4>Key Execution Steps:</h4>
+                <ul>
+                    <li>Involved in constructing an updated Contract Playbook deployment schedule to standardize operational guidance.</li>
+                    <li>Instituted dynamic change-control workflows during high-volume drafting cycles.</li>
+			<li>Assisted in converting traditional, manual contract redlining and drafting processes into automated digital workflows.</li>
+                </ul>
+                <div class="outcome-box">
+                    <strong>Project Impact:</strong> Eliminated processing backlogs, secured high legal accuracy, and minimized contract processing risk across cross-functional teams.
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Client Workspace Migration Framework</h3>
+                <div class="project-meta">
+                    <span class="meta-tag">Methodology: Agile</span>
+                    <span class="meta-tag">Industry: Administrative Services</span>
+                </div>
+                <p>Directed a team project migrating manual e-mail request tracking into structured digital work environments.</p>
+                <h4>Key Execution Steps:</h4>
+                <ul>
+                    <li>Led and transformed continuous ad-hoc administrative inquiries into a defined and predictable tracking system.</li>
+
+</section>
+
+        <section id="certifications">
+	<div class="project-card">
+            <h2>Certifications</h2>
+		<ul>
+                    <li>Project Management Professional (PMP)</li>
+		<p><a href="https://www.credly.com/badges/367d660c-b05a-4137-be5d-ec4edd50837b/public_url" class="cta-btn">Badge</a>
+    </header>
+
+
+                    
+
+
+
